@@ -1,0 +1,4010 @@
+{
+  "openapi": "3.1.0",
+  "jsonSchemaDialect": "https://spec.openapis.org/oas/3.1/dialect/base",
+  "info": {
+    "title": "Threads Graph API",
+    "version": "v1.0"
+  },
+  "servers": [
+    {
+      "url": "https://graph.threads.com/v1.0"
+    }
+  ],
+  "paths": {
+    "/{node-id}/threads_insights": {
+      "get": {
+        "operationId": "get_node_id_threads_insights",
+        "tags": [
+          "ThreadsInsights"
+        ],
+        "parameters": [
+          {
+            "name": "node-id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "metric",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "since",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 0
+            }
+          },
+          {
+            "name": "until",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 0
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "ThreadsInsights",
+            "name": null,
+            "method": "get",
+            "endpoint": "threads_insights",
+            "basePath": "{node-id}",
+            "returnType": "ThreadsInsights",
+            "parameters": [
+              {
+                "name": "metric",
+                "type": "string",
+                "required": true
+              },
+              {
+                "name": "since",
+                "type": "unsigned int",
+                "required": false
+              },
+              {
+                "name": "until",
+                "type": "unsigned int",
+                "required": false
+              }
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThreadsInsights"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/me/threads_insights": {
+      "get": {
+        "operationId": "get_me_threads_insights",
+        "tags": [
+          "ThreadsInsights"
+        ],
+        "parameters": [
+          {
+            "name": "metric",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "since",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 0
+            }
+          },
+          {
+            "name": "until",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 0
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "ThreadsInsights",
+            "name": null,
+            "method": "get",
+            "endpoint": "threads_insights",
+            "basePath": "me",
+            "returnType": "ThreadsInsights",
+            "parameters": [
+              {
+                "name": "metric",
+                "type": "string",
+                "required": true
+              },
+              {
+                "name": "since",
+                "type": "unsigned int",
+                "required": false
+              },
+              {
+                "name": "until",
+                "type": "unsigned int",
+                "required": false
+              }
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThreadsInsights"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/{node-id}/insights": {
+      "get": {
+        "operationId": "get_node_id_insights",
+        "tags": [
+          "ThreadsInsights"
+        ],
+        "parameters": [
+          {
+            "name": "node-id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "metric",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "since",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 0
+            }
+          },
+          {
+            "name": "until",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 0
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "ThreadsInsights",
+            "name": null,
+            "method": "get",
+            "endpoint": "insights",
+            "basePath": "{node-id}",
+            "returnType": "ThreadsInsights",
+            "parameters": [
+              {
+                "name": "metric",
+                "type": "string",
+                "required": true
+              },
+              {
+                "name": "since",
+                "type": "unsigned int",
+                "required": false
+              },
+              {
+                "name": "until",
+                "type": "unsigned int",
+                "required": false
+              }
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThreadsInsights"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/{node-id}/threads": {
+      "get": {
+        "operationId": "get_node_id_threads",
+        "tags": [
+          "ThreadsMediaList"
+        ],
+        "parameters": [
+          {
+            "name": "node-id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 0
+            }
+          },
+          {
+            "name": "before",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "after",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "since",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 0
+            }
+          },
+          {
+            "name": "until",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 0
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "ThreadsMediaList",
+            "name": null,
+            "method": "get",
+            "endpoint": "threads",
+            "basePath": "{node-id}",
+            "returnType": "ThreadsMediaList",
+            "parameters": [
+              {
+                "name": "limit",
+                "type": "unsigned int",
+                "required": false
+              },
+              {
+                "name": "before",
+                "type": "string",
+                "required": false
+              },
+              {
+                "name": "after",
+                "type": "string",
+                "required": false
+              },
+              {
+                "name": "since",
+                "type": "unsigned int",
+                "required": false
+              },
+              {
+                "name": "until",
+                "type": "unsigned int",
+                "required": false
+              }
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThreadsMediaList"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "post_node_id_threads",
+        "tags": [
+          "ThreadsResult"
+        ],
+        "parameters": [
+          {
+            "name": "node-id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "ThreadsResult",
+            "name": null,
+            "method": "post",
+            "endpoint": "threads",
+            "basePath": "{node-id}",
+            "returnType": "ThreadsResult",
+            "parameters": [
+              {
+                "name": "media_type",
+                "type": "string",
+                "required": true
+              },
+              {
+                "name": "text",
+                "type": "string",
+                "required": false
+              },
+              {
+                "name": "image_url",
+                "type": "string",
+                "required": false
+              },
+              {
+                "name": "video_url",
+                "type": "string",
+                "required": false
+              },
+              {
+                "name": "children",
+                "type": "string",
+                "required": false
+              },
+              {
+                "name": "alt_text",
+                "type": "string",
+                "required": false
+              },
+              {
+                "name": "reply_control",
+                "type": "string",
+                "required": false
+              },
+              {
+                "name": "reply_to_id",
+                "type": "string",
+                "required": false
+              },
+              {
+                "name": "quote_post_id",
+                "type": "string",
+                "required": false
+              },
+              {
+                "name": "link_attachment",
+                "type": "string",
+                "required": false
+              },
+              {
+                "name": "topic_tag",
+                "type": "string",
+                "required": false
+              },
+              {
+                "name": "location_id",
+                "type": "string",
+                "required": false
+              },
+              {
+                "name": "is_carousel_item",
+                "type": "bool",
+                "required": false
+              },
+              {
+                "name": "auto_publish_text",
+                "type": "bool",
+                "required": false
+              },
+              {
+                "name": "is_spoiler_media",
+                "type": "bool",
+                "required": false
+              },
+              {
+                "name": "is_ghost_post",
+                "type": "bool",
+                "required": false
+              },
+              {
+                "name": "enable_reply_approvals",
+                "type": "bool",
+                "required": false
+              },
+              {
+                "name": "poll_attachment",
+                "type": "Object",
+                "required": false
+              },
+              {
+                "name": "text_attachment",
+                "type": "Object",
+                "required": false
+              },
+              {
+                "name": "gif_attachment",
+                "type": "Object",
+                "required": false
+              },
+              {
+                "name": "text_entities",
+                "type": "list\u003CObject\u003E",
+                "required": false
+              }
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThreadsResult"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "media_type": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "image_url": {
+                    "type": "string"
+                  },
+                  "video_url": {
+                    "type": "string"
+                  },
+                  "children": {
+                    "type": "string"
+                  },
+                  "alt_text": {
+                    "type": "string"
+                  },
+                  "reply_control": {
+                    "type": "string"
+                  },
+                  "reply_to_id": {
+                    "type": "string"
+                  },
+                  "quote_post_id": {
+                    "type": "string"
+                  },
+                  "link_attachment": {
+                    "type": "string"
+                  },
+                  "topic_tag": {
+                    "type": "string"
+                  },
+                  "location_id": {
+                    "type": "string"
+                  },
+                  "is_carousel_item": {
+                    "type": "boolean"
+                  },
+                  "auto_publish_text": {
+                    "type": "boolean"
+                  },
+                  "is_spoiler_media": {
+                    "type": "boolean"
+                  },
+                  "is_ghost_post": {
+                    "type": "boolean"
+                  },
+                  "enable_reply_approvals": {
+                    "type": "boolean"
+                  },
+                  "poll_attachment": {
+                    "type": "string",
+                    "description": "A JSON-encoded value.",
+                    "contentMediaType": "application/json",
+                    "contentSchema": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  },
+                  "text_attachment": {
+                    "type": "string",
+                    "description": "A JSON-encoded value.",
+                    "contentMediaType": "application/json",
+                    "contentSchema": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  },
+                  "gif_attachment": {
+                    "type": "string",
+                    "description": "A JSON-encoded value.",
+                    "contentMediaType": "application/json",
+                    "contentSchema": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  },
+                  "text_entities": {
+                    "type": "string",
+                    "description": "A JSON-encoded value.",
+                    "contentMediaType": "application/json",
+                    "contentSchema": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "additionalProperties": true
+                      }
+                    }
+                  }
+                },
+                "required": [
+                  "media_type"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/{node-id}/replies": {
+      "get": {
+        "operationId": "get_node_id_replies",
+        "tags": [
+          "ThreadsMediaList"
+        ],
+        "parameters": [
+          {
+            "name": "node-id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 0
+            }
+          },
+          {
+            "name": "before",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "after",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "since",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 0
+            }
+          },
+          {
+            "name": "until",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 0
+            }
+          },
+          {
+            "name": "reverse",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "ThreadsMediaList",
+            "name": null,
+            "method": "get",
+            "endpoint": "replies",
+            "basePath": "{node-id}",
+            "returnType": "ThreadsMediaList",
+            "parameters": [
+              {
+                "name": "limit",
+                "type": "unsigned int",
+                "required": false
+              },
+              {
+                "name": "before",
+                "type": "string",
+                "required": false
+              },
+              {
+                "name": "after",
+                "type": "string",
+                "required": false
+              },
+              {
+                "name": "since",
+                "type": "unsigned int",
+                "required": false
+              },
+              {
+                "name": "until",
+                "type": "unsigned int",
+                "required": false
+              },
+              {
+                "name": "reverse",
+                "type": "bool",
+                "required": false
+              }
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThreadsMediaList"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/{node-id}/mentions": {
+      "get": {
+        "operationId": "get_node_id_mentions",
+        "tags": [
+          "ThreadsMediaList"
+        ],
+        "parameters": [
+          {
+            "name": "node-id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 0
+            }
+          },
+          {
+            "name": "before",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "after",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "since",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 0
+            }
+          },
+          {
+            "name": "until",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 0
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "ThreadsMediaList",
+            "name": null,
+            "method": "get",
+            "endpoint": "mentions",
+            "basePath": "{node-id}",
+            "returnType": "ThreadsMediaList",
+            "parameters": [
+              {
+                "name": "limit",
+                "type": "unsigned int",
+                "required": false
+              },
+              {
+                "name": "before",
+                "type": "string",
+                "required": false
+              },
+              {
+                "name": "after",
+                "type": "string",
+                "required": false
+              },
+              {
+                "name": "since",
+                "type": "unsigned int",
+                "required": false
+              },
+              {
+                "name": "until",
+                "type": "unsigned int",
+                "required": false
+              }
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThreadsMediaList"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/me/threads": {
+      "get": {
+        "operationId": "get_me_threads",
+        "tags": [
+          "ThreadsMediaList"
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 0
+            }
+          },
+          {
+            "name": "before",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "after",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "since",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 0
+            }
+          },
+          {
+            "name": "until",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 0
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "ThreadsMediaList",
+            "name": null,
+            "method": "get",
+            "endpoint": "threads",
+            "basePath": "me",
+            "returnType": "ThreadsMediaList",
+            "parameters": [
+              {
+                "name": "limit",
+                "type": "unsigned int",
+                "required": false
+              },
+              {
+                "name": "before",
+                "type": "string",
+                "required": false
+              },
+              {
+                "name": "after",
+                "type": "string",
+                "required": false
+              },
+              {
+                "name": "since",
+                "type": "unsigned int",
+                "required": false
+              },
+              {
+                "name": "until",
+                "type": "unsigned int",
+                "required": false
+              }
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThreadsMediaList"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "operationId": "post_me_threads",
+        "tags": [
+          "ThreadsResult"
+        ],
+        "parameters": [],
+        "x-meta-operations": [
+          {
+            "node": "ThreadsResult",
+            "name": null,
+            "method": "post",
+            "endpoint": "threads",
+            "basePath": "me",
+            "returnType": "ThreadsResult",
+            "parameters": [
+              {
+                "name": "media_type",
+                "type": "string",
+                "required": true
+              },
+              {
+                "name": "text",
+                "type": "string",
+                "required": false
+              },
+              {
+                "name": "image_url",
+                "type": "string",
+                "required": false
+              },
+              {
+                "name": "video_url",
+                "type": "string",
+                "required": false
+              },
+              {
+                "name": "children",
+                "type": "string",
+                "required": false
+              },
+              {
+                "name": "alt_text",
+                "type": "string",
+                "required": false
+              },
+              {
+                "name": "reply_control",
+                "type": "string",
+                "required": false
+              },
+              {
+                "name": "reply_to_id",
+                "type": "string",
+                "required": false
+              },
+              {
+                "name": "quote_post_id",
+                "type": "string",
+                "required": false
+              },
+              {
+                "name": "link_attachment",
+                "type": "string",
+                "required": false
+              },
+              {
+                "name": "topic_tag",
+                "type": "string",
+                "required": false
+              },
+              {
+                "name": "location_id",
+                "type": "string",
+                "required": false
+              },
+              {
+                "name": "is_carousel_item",
+                "type": "bool",
+                "required": false
+              },
+              {
+                "name": "auto_publish_text",
+                "type": "bool",
+                "required": false
+              },
+              {
+                "name": "is_spoiler_media",
+                "type": "bool",
+                "required": false
+              },
+              {
+                "name": "is_ghost_post",
+                "type": "bool",
+                "required": false
+              },
+              {
+                "name": "enable_reply_approvals",
+                "type": "bool",
+                "required": false
+              },
+              {
+                "name": "poll_attachment",
+                "type": "Object",
+                "required": false
+              },
+              {
+                "name": "text_attachment",
+                "type": "Object",
+                "required": false
+              },
+              {
+                "name": "gif_attachment",
+                "type": "Object",
+                "required": false
+              },
+              {
+                "name": "text_entities",
+                "type": "list\u003CObject\u003E",
+                "required": false
+              }
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThreadsResult"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "media_type": {
+                    "type": "string"
+                  },
+                  "text": {
+                    "type": "string"
+                  },
+                  "image_url": {
+                    "type": "string"
+                  },
+                  "video_url": {
+                    "type": "string"
+                  },
+                  "children": {
+                    "type": "string"
+                  },
+                  "alt_text": {
+                    "type": "string"
+                  },
+                  "reply_control": {
+                    "type": "string"
+                  },
+                  "reply_to_id": {
+                    "type": "string"
+                  },
+                  "quote_post_id": {
+                    "type": "string"
+                  },
+                  "link_attachment": {
+                    "type": "string"
+                  },
+                  "topic_tag": {
+                    "type": "string"
+                  },
+                  "location_id": {
+                    "type": "string"
+                  },
+                  "is_carousel_item": {
+                    "type": "boolean"
+                  },
+                  "auto_publish_text": {
+                    "type": "boolean"
+                  },
+                  "is_spoiler_media": {
+                    "type": "boolean"
+                  },
+                  "is_ghost_post": {
+                    "type": "boolean"
+                  },
+                  "enable_reply_approvals": {
+                    "type": "boolean"
+                  },
+                  "poll_attachment": {
+                    "type": "string",
+                    "description": "A JSON-encoded value.",
+                    "contentMediaType": "application/json",
+                    "contentSchema": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  },
+                  "text_attachment": {
+                    "type": "string",
+                    "description": "A JSON-encoded value.",
+                    "contentMediaType": "application/json",
+                    "contentSchema": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  },
+                  "gif_attachment": {
+                    "type": "string",
+                    "description": "A JSON-encoded value.",
+                    "contentMediaType": "application/json",
+                    "contentSchema": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  },
+                  "text_entities": {
+                    "type": "string",
+                    "description": "A JSON-encoded value.",
+                    "contentMediaType": "application/json",
+                    "contentSchema": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "additionalProperties": true
+                      }
+                    }
+                  }
+                },
+                "required": [
+                  "media_type"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/me/replies": {
+      "get": {
+        "operationId": "get_me_replies",
+        "tags": [
+          "ThreadsMediaList"
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 0
+            }
+          },
+          {
+            "name": "before",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "after",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "since",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 0
+            }
+          },
+          {
+            "name": "until",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 0
+            }
+          },
+          {
+            "name": "reverse",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "ThreadsMediaList",
+            "name": null,
+            "method": "get",
+            "endpoint": "replies",
+            "basePath": "me",
+            "returnType": "ThreadsMediaList",
+            "parameters": [
+              {
+                "name": "limit",
+                "type": "unsigned int",
+                "required": false
+              },
+              {
+                "name": "before",
+                "type": "string",
+                "required": false
+              },
+              {
+                "name": "after",
+                "type": "string",
+                "required": false
+              },
+              {
+                "name": "since",
+                "type": "unsigned int",
+                "required": false
+              },
+              {
+                "name": "until",
+                "type": "unsigned int",
+                "required": false
+              },
+              {
+                "name": "reverse",
+                "type": "bool",
+                "required": false
+              }
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThreadsMediaList"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/me/mentions": {
+      "get": {
+        "operationId": "get_me_mentions",
+        "tags": [
+          "ThreadsMediaList"
+        ],
+        "parameters": [
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 0
+            }
+          },
+          {
+            "name": "before",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "after",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "since",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 0
+            }
+          },
+          {
+            "name": "until",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 0
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "ThreadsMediaList",
+            "name": null,
+            "method": "get",
+            "endpoint": "mentions",
+            "basePath": "me",
+            "returnType": "ThreadsMediaList",
+            "parameters": [
+              {
+                "name": "limit",
+                "type": "unsigned int",
+                "required": false
+              },
+              {
+                "name": "before",
+                "type": "string",
+                "required": false
+              },
+              {
+                "name": "after",
+                "type": "string",
+                "required": false
+              },
+              {
+                "name": "since",
+                "type": "unsigned int",
+                "required": false
+              },
+              {
+                "name": "until",
+                "type": "unsigned int",
+                "required": false
+              }
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThreadsMediaList"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/{node-id}/conversation": {
+      "get": {
+        "operationId": "get_node_id_conversation",
+        "tags": [
+          "ThreadsMediaList"
+        ],
+        "parameters": [
+          {
+            "name": "node-id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 0
+            }
+          },
+          {
+            "name": "before",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "after",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "reverse",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "ThreadsMediaList",
+            "name": null,
+            "method": "get",
+            "endpoint": "conversation",
+            "basePath": "{node-id}",
+            "returnType": "ThreadsMediaList",
+            "parameters": [
+              {
+                "name": "limit",
+                "type": "unsigned int",
+                "required": false
+              },
+              {
+                "name": "before",
+                "type": "string",
+                "required": false
+              },
+              {
+                "name": "after",
+                "type": "string",
+                "required": false
+              },
+              {
+                "name": "reverse",
+                "type": "bool",
+                "required": false
+              }
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThreadsMediaList"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/{node-id}/pending_replies": {
+      "get": {
+        "operationId": "get_node_id_pending_replies",
+        "tags": [
+          "ThreadsMediaList"
+        ],
+        "parameters": [
+          {
+            "name": "node-id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 0
+            }
+          },
+          {
+            "name": "before",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "after",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "reverse",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "approval_status",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "ThreadsMediaList",
+            "name": null,
+            "method": "get",
+            "endpoint": "pending_replies",
+            "basePath": "{node-id}",
+            "returnType": "ThreadsMediaList",
+            "parameters": [
+              {
+                "name": "limit",
+                "type": "unsigned int",
+                "required": false
+              },
+              {
+                "name": "before",
+                "type": "string",
+                "required": false
+              },
+              {
+                "name": "after",
+                "type": "string",
+                "required": false
+              },
+              {
+                "name": "reverse",
+                "type": "bool",
+                "required": false
+              },
+              {
+                "name": "approval_status",
+                "type": "string",
+                "required": false
+              }
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThreadsMediaList"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/keyword_search": {
+      "get": {
+        "operationId": "get_keyword_search",
+        "tags": [
+          "ThreadsMediaList"
+        ],
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "search_type",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "search_mode",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 0
+            }
+          },
+          {
+            "name": "before",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "after",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "since",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 0
+            }
+          },
+          {
+            "name": "until",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 0
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "ThreadsMediaList",
+            "name": null,
+            "method": "get",
+            "endpoint": "",
+            "basePath": "keyword_search",
+            "returnType": "ThreadsMediaList",
+            "parameters": [
+              {
+                "name": "q",
+                "type": "string",
+                "required": true
+              },
+              {
+                "name": "search_type",
+                "type": "string",
+                "required": false
+              },
+              {
+                "name": "search_mode",
+                "type": "string",
+                "required": false
+              },
+              {
+                "name": "limit",
+                "type": "unsigned int",
+                "required": false
+              },
+              {
+                "name": "before",
+                "type": "string",
+                "required": false
+              },
+              {
+                "name": "after",
+                "type": "string",
+                "required": false
+              },
+              {
+                "name": "since",
+                "type": "unsigned int",
+                "required": false
+              },
+              {
+                "name": "until",
+                "type": "unsigned int",
+                "required": false
+              }
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThreadsMediaList"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/profile_posts": {
+      "get": {
+        "operationId": "get_profile_posts",
+        "tags": [
+          "ThreadsMediaList"
+        ],
+        "parameters": [
+          {
+            "name": "username",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 0
+            }
+          },
+          {
+            "name": "before",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "after",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "since",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 0
+            }
+          },
+          {
+            "name": "until",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 0
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "ThreadsMediaList",
+            "name": null,
+            "method": "get",
+            "endpoint": "",
+            "basePath": "profile_posts",
+            "returnType": "ThreadsMediaList",
+            "parameters": [
+              {
+                "name": "username",
+                "type": "string",
+                "required": true
+              },
+              {
+                "name": "limit",
+                "type": "unsigned int",
+                "required": false
+              },
+              {
+                "name": "before",
+                "type": "string",
+                "required": false
+              },
+              {
+                "name": "after",
+                "type": "string",
+                "required": false
+              },
+              {
+                "name": "since",
+                "type": "unsigned int",
+                "required": false
+              },
+              {
+                "name": "until",
+                "type": "unsigned int",
+                "required": false
+              }
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThreadsMediaList"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/{node-id}": {
+      "get": {
+        "operationId": "get_node_id",
+        "tags": [
+          "ThreadsNode"
+        ],
+        "parameters": [
+          {
+            "name": "node-id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "ThreadsNode",
+            "name": null,
+            "method": "get",
+            "endpoint": "",
+            "basePath": "{node-id}",
+            "returnType": "ThreadsNode",
+            "parameters": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThreadsNode"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "operationId": "delete_node_id",
+        "tags": [
+          "ThreadsResult"
+        ],
+        "parameters": [
+          {
+            "name": "node-id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "ThreadsResult",
+            "name": null,
+            "method": "delete",
+            "endpoint": "",
+            "basePath": "{node-id}",
+            "returnType": "ThreadsResult",
+            "parameters": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThreadsResult"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/me": {
+      "get": {
+        "operationId": "get_me",
+        "tags": [
+          "ThreadsNode"
+        ],
+        "parameters": [
+          {
+            "name": "fields",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "ThreadsNode",
+            "name": null,
+            "method": "get",
+            "endpoint": "",
+            "basePath": "me",
+            "returnType": "ThreadsNode",
+            "parameters": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThreadsNode"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/oembed": {
+      "get": {
+        "operationId": "get_oembed",
+        "tags": [
+          "ThreadsOEmbed"
+        ],
+        "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "maxwidth",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int64",
+              "minimum": 0
+            }
+          },
+          {
+            "name": "hide_thread",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "ThreadsOEmbed",
+            "name": null,
+            "method": "get",
+            "endpoint": "",
+            "basePath": "oembed",
+            "returnType": "ThreadsOEmbed",
+            "parameters": [
+              {
+                "name": "url",
+                "type": "string",
+                "required": true
+              },
+              {
+                "name": "maxwidth",
+                "type": "unsigned int",
+                "required": false
+              },
+              {
+                "name": "hide_thread",
+                "type": "bool",
+                "required": false
+              }
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThreadsOEmbed"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/{node-id}/threads_publishing_limit": {
+      "get": {
+        "operationId": "get_node_id_threads_publishing_limit",
+        "tags": [
+          "ThreadsPublishingLimits"
+        ],
+        "parameters": [
+          {
+            "name": "node-id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "ThreadsPublishingLimits",
+            "name": null,
+            "method": "get",
+            "endpoint": "threads_publishing_limit",
+            "basePath": "{node-id}",
+            "returnType": "ThreadsPublishingLimits",
+            "parameters": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThreadsPublishingLimits"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/me/threads_publishing_limit": {
+      "get": {
+        "operationId": "get_me_threads_publishing_limit",
+        "tags": [
+          "ThreadsPublishingLimits"
+        ],
+        "parameters": [
+          {
+            "name": "fields",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "ThreadsPublishingLimits",
+            "name": null,
+            "method": "get",
+            "endpoint": "threads_publishing_limit",
+            "basePath": "me",
+            "returnType": "ThreadsPublishingLimits",
+            "parameters": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThreadsPublishingLimits"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/{node-id}/threads_publish": {
+      "post": {
+        "operationId": "post_node_id_threads_publish",
+        "tags": [
+          "ThreadsResult"
+        ],
+        "parameters": [
+          {
+            "name": "node-id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "ThreadsResult",
+            "name": null,
+            "method": "post",
+            "endpoint": "threads_publish",
+            "basePath": "{node-id}",
+            "returnType": "ThreadsResult",
+            "parameters": [
+              {
+                "name": "creation_id",
+                "type": "string",
+                "required": true
+              }
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThreadsResult"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "creation_id": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "creation_id"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/me/threads_publish": {
+      "post": {
+        "operationId": "post_me_threads_publish",
+        "tags": [
+          "ThreadsResult"
+        ],
+        "parameters": [],
+        "x-meta-operations": [
+          {
+            "node": "ThreadsResult",
+            "name": null,
+            "method": "post",
+            "endpoint": "threads_publish",
+            "basePath": "me",
+            "returnType": "ThreadsResult",
+            "parameters": [
+              {
+                "name": "creation_id",
+                "type": "string",
+                "required": true
+              }
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThreadsResult"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "creation_id": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "creation_id"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/{node-id}/manage_reply": {
+      "post": {
+        "operationId": "post_node_id_manage_reply",
+        "tags": [
+          "ThreadsResult"
+        ],
+        "parameters": [
+          {
+            "name": "node-id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "ThreadsResult",
+            "name": null,
+            "method": "post",
+            "endpoint": "manage_reply",
+            "basePath": "{node-id}",
+            "returnType": "ThreadsResult",
+            "parameters": [
+              {
+                "name": "hide",
+                "type": "bool",
+                "required": true
+              }
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThreadsResult"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "hide": {
+                    "type": "boolean"
+                  }
+                },
+                "required": [
+                  "hide"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "/{node-id}/repost": {
+      "post": {
+        "operationId": "post_node_id_repost",
+        "tags": [
+          "ThreadsResult"
+        ],
+        "parameters": [
+          {
+            "name": "node-id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "ThreadsResult",
+            "name": null,
+            "method": "post",
+            "endpoint": "repost",
+            "basePath": "{node-id}",
+            "returnType": "ThreadsResult",
+            "parameters": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThreadsResult"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": false,
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/oauth/access_token": {
+      "post": {
+        "operationId": "post_oauth_access_token",
+        "tags": [
+          "ThreadsToken"
+        ],
+        "parameters": [],
+        "x-meta-operations": [
+          {
+            "node": "ThreadsToken",
+            "name": null,
+            "method": "post",
+            "endpoint": "access_token",
+            "basePath": "oauth",
+            "returnType": "ThreadsToken",
+            "parameters": [
+              {
+                "name": "client_id",
+                "type": "string",
+                "required": true
+              },
+              {
+                "name": "client_secret",
+                "type": "string",
+                "required": true
+              },
+              {
+                "name": "code",
+                "type": "string",
+                "required": true
+              },
+              {
+                "name": "grant_type",
+                "type": "string",
+                "required": true
+              },
+              {
+                "name": "redirect_uri",
+                "type": "string",
+                "required": true
+              }
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThreadsToken"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/x-www-form-urlencoded": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "client_id": {
+                    "type": "string"
+                  },
+                  "client_secret": {
+                    "type": "string"
+                  },
+                  "code": {
+                    "type": "string"
+                  },
+                  "grant_type": {
+                    "type": "string"
+                  },
+                  "redirect_uri": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "client_id",
+                  "client_secret",
+                  "code",
+                  "grant_type",
+                  "redirect_uri"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "operationId": "get_oauth_access_token",
+        "tags": [
+          "ThreadsToken"
+        ],
+        "parameters": [
+          {
+            "name": "client_id",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "client_secret",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "grant_type",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "ThreadsToken",
+            "name": null,
+            "method": "get",
+            "endpoint": "access_token",
+            "basePath": "oauth",
+            "returnType": "ThreadsToken",
+            "parameters": [
+              {
+                "name": "client_id",
+                "type": "string",
+                "required": true
+              },
+              {
+                "name": "client_secret",
+                "type": "string",
+                "required": true
+              },
+              {
+                "name": "grant_type",
+                "type": "string",
+                "required": true
+              }
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThreadsToken"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/access_token": {
+      "get": {
+        "operationId": "get_access_token",
+        "tags": [
+          "ThreadsToken"
+        ],
+        "parameters": [
+          {
+            "name": "grant_type",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "client_secret",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "access_token",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "ThreadsToken",
+            "name": null,
+            "method": "get",
+            "endpoint": "",
+            "basePath": "access_token",
+            "returnType": "ThreadsToken",
+            "parameters": [
+              {
+                "name": "grant_type",
+                "type": "string",
+                "required": true
+              },
+              {
+                "name": "client_secret",
+                "type": "string",
+                "required": true
+              },
+              {
+                "name": "access_token",
+                "type": "string",
+                "required": true
+              }
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThreadsToken"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/refresh_access_token": {
+      "get": {
+        "operationId": "get_refresh_access_token",
+        "tags": [
+          "ThreadsToken"
+        ],
+        "parameters": [
+          {
+            "name": "grant_type",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "access_token",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "ThreadsToken",
+            "name": null,
+            "method": "get",
+            "endpoint": "",
+            "basePath": "refresh_access_token",
+            "returnType": "ThreadsToken",
+            "parameters": [
+              {
+                "name": "grant_type",
+                "type": "string",
+                "required": true
+              },
+              {
+                "name": "access_token",
+                "type": "string",
+                "required": true
+              }
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThreadsToken"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/debug_token": {
+      "get": {
+        "operationId": "get_debug_token",
+        "tags": [
+          "ThreadsTokenDebug"
+        ],
+        "parameters": [
+          {
+            "name": "input_token",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "ThreadsTokenDebug",
+            "name": null,
+            "method": "get",
+            "endpoint": "",
+            "basePath": "debug_token",
+            "returnType": "ThreadsTokenDebug",
+            "parameters": [
+              {
+                "name": "input_token",
+                "type": "string",
+                "required": true
+              }
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThreadsTokenDebug"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/profile_lookup": {
+      "get": {
+        "operationId": "get_profile_lookup",
+        "tags": [
+          "ThreadsUser"
+        ],
+        "parameters": [
+          {
+            "name": "username",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "x-meta-operations": [
+          {
+            "node": "ThreadsUser",
+            "name": null,
+            "method": "get",
+            "endpoint": "",
+            "basePath": "profile_lookup",
+            "returnType": "ThreadsUser",
+            "parameters": [
+              {
+                "name": "username",
+                "type": "string",
+                "required": true
+              }
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ThreadsUser"
+                }
+              }
+            }
+          },
+          "default": {
+            "description": "Graph API error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "error": {
+                      "type": "object",
+                      "additionalProperties": true
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ThreadsCursors": {
+        "type": "object",
+        "properties": {
+          "before": {
+            "type": "string"
+          },
+          "after": {
+            "type": "string"
+          }
+        }
+      },
+      "ThreadsIdentity": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          }
+        }
+      },
+      "ThreadsInsight": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "period": {
+            "type": "string"
+          },
+          "values": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ThreadsInsightValue"
+            }
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "id": {
+            "type": "string"
+          },
+          "total_value": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "link_total_values": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": true
+            }
+          }
+        }
+      },
+      "ThreadsInsightValue": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "end_time": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      },
+      "ThreadsInsights": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ThreadsInsight"
+            }
+          },
+          "paging": {
+            "$ref": "#/components/schemas/ThreadsPaging"
+          }
+        }
+      },
+      "ThreadsMedia": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          },
+          "media_type": {
+            "type": "string"
+          },
+          "media_product_type": {
+            "type": "string"
+          },
+          "media_url": {
+            "type": "string"
+          },
+          "gif_url": {
+            "type": "string"
+          },
+          "permalink": {
+            "type": "string"
+          },
+          "shortcode": {
+            "type": "string"
+          },
+          "thumbnail_url": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "username": {
+            "type": "string"
+          },
+          "owner": {
+            "$ref": "#/components/schemas/ThreadsIdentity"
+          },
+          "children": {
+            "$ref": "#/components/schemas/ThreadsMediaList"
+          },
+          "is_quote_post": {
+            "type": "boolean"
+          },
+          "quoted_post": {
+            "$ref": "#/components/schemas/ThreadsIdentity"
+          },
+          "reposted_post": {
+            "$ref": "#/components/schemas/ThreadsIdentity"
+          },
+          "alt_text": {
+            "type": "string"
+          },
+          "link_attachment_url": {
+            "type": "string"
+          },
+          "has_replies": {
+            "type": "boolean"
+          },
+          "is_reply": {
+            "type": "boolean"
+          },
+          "is_reply_owned_by_me": {
+            "type": "boolean"
+          },
+          "root_post": {
+            "$ref": "#/components/schemas/ThreadsIdentity"
+          },
+          "replied_to": {
+            "$ref": "#/components/schemas/ThreadsIdentity"
+          },
+          "hide_status": {
+            "type": "string"
+          },
+          "reply_audience": {
+            "type": "string"
+          },
+          "reply_approval_status": {
+            "type": "string"
+          },
+          "poll_attachment": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "location_id": {
+            "type": "string"
+          },
+          "topic_tag": {
+            "type": "string"
+          },
+          "is_verified": {
+            "type": "boolean"
+          },
+          "profile_picture_url": {
+            "type": "string"
+          },
+          "text_entities": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": true
+            }
+          },
+          "is_spoiler_media": {
+            "type": "boolean"
+          },
+          "ghost_post_status": {
+            "type": "string"
+          }
+        }
+      },
+      "ThreadsMediaList": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ThreadsMedia"
+            }
+          },
+          "paging": {
+            "$ref": "#/components/schemas/ThreadsPaging"
+          }
+        }
+      },
+      "ThreadsNode": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          },
+          "media_type": {
+            "type": "string"
+          },
+          "media_product_type": {
+            "type": "string"
+          },
+          "media_url": {
+            "type": "string"
+          },
+          "gif_url": {
+            "type": "string"
+          },
+          "permalink": {
+            "type": "string"
+          },
+          "shortcode": {
+            "type": "string"
+          },
+          "thumbnail_url": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "username": {
+            "type": "string"
+          },
+          "owner": {
+            "$ref": "#/components/schemas/ThreadsIdentity"
+          },
+          "children": {
+            "$ref": "#/components/schemas/ThreadsMediaList"
+          },
+          "is_quote_post": {
+            "type": "boolean"
+          },
+          "quoted_post": {
+            "$ref": "#/components/schemas/ThreadsIdentity"
+          },
+          "reposted_post": {
+            "$ref": "#/components/schemas/ThreadsIdentity"
+          },
+          "alt_text": {
+            "type": "string"
+          },
+          "link_attachment_url": {
+            "type": "string"
+          },
+          "has_replies": {
+            "type": "boolean"
+          },
+          "is_reply": {
+            "type": "boolean"
+          },
+          "is_reply_owned_by_me": {
+            "type": "boolean"
+          },
+          "root_post": {
+            "$ref": "#/components/schemas/ThreadsIdentity"
+          },
+          "replied_to": {
+            "$ref": "#/components/schemas/ThreadsIdentity"
+          },
+          "hide_status": {
+            "type": "string"
+          },
+          "reply_audience": {
+            "type": "string"
+          },
+          "reply_approval_status": {
+            "type": "string"
+          },
+          "poll_attachment": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "location_id": {
+            "type": "string"
+          },
+          "topic_tag": {
+            "type": "string"
+          },
+          "is_verified": {
+            "type": "boolean"
+          },
+          "profile_picture_url": {
+            "type": "string"
+          },
+          "text_entities": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": true
+            }
+          },
+          "is_spoiler_media": {
+            "type": "boolean"
+          },
+          "ghost_post_status": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "threads_profile_picture_url": {
+            "type": "string"
+          },
+          "threads_biography": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "error_message": {
+            "type": "string"
+          }
+        }
+      },
+      "ThreadsOEmbed": {
+        "type": "object",
+        "properties": {
+          "version": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "html": {
+            "type": "string"
+          },
+          "author_name": {
+            "type": "string"
+          },
+          "author_url": {
+            "type": "string"
+          },
+          "provider_name": {
+            "type": "string"
+          },
+          "provider_url": {
+            "type": "string"
+          },
+          "width": {
+            "type": "integer",
+            "format": "int64",
+            "minimum": 0
+          }
+        }
+      },
+      "ThreadsPaging": {
+        "type": "object",
+        "properties": {
+          "cursors": {
+            "$ref": "#/components/schemas/ThreadsCursors"
+          },
+          "next": {
+            "type": "string"
+          },
+          "previous": {
+            "type": "string"
+          }
+        }
+      },
+      "ThreadsPublishingLimit": {
+        "type": "object",
+        "properties": {
+          "quota_usage": {
+            "type": "integer",
+            "format": "int64",
+            "minimum": 0
+          },
+          "config": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "reply_quota_usage": {
+            "type": "integer",
+            "format": "int64",
+            "minimum": 0
+          },
+          "reply_config": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "delete_quota_usage": {
+            "type": "integer",
+            "format": "int64",
+            "minimum": 0
+          },
+          "delete_config": {
+            "type": "object",
+            "additionalProperties": true
+          },
+          "location_search_quota_usage": {
+            "type": "integer",
+            "format": "int64",
+            "minimum": 0
+          },
+          "location_search_config": {
+            "type": "object",
+            "additionalProperties": true
+          }
+        }
+      },
+      "ThreadsPublishingLimits": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ThreadsPublishingLimit"
+            }
+          }
+        }
+      },
+      "ThreadsResult": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "success": {
+            "type": "boolean"
+          },
+          "deleted_id": {
+            "type": "string"
+          }
+        }
+      },
+      "ThreadsToken": {
+        "type": "object",
+        "properties": {
+          "access_token": {
+            "type": "string"
+          },
+          "token_type": {
+            "type": "string"
+          },
+          "expires_in": {
+            "type": "integer",
+            "format": "int64",
+            "minimum": 0
+          },
+          "user_id": {
+            "type": "string"
+          }
+        }
+      },
+      "ThreadsTokenData": {
+        "type": "object",
+        "properties": {
+          "app_id": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "application": {
+            "type": "string"
+          },
+          "data_access_expires_at": {
+            "type": "integer",
+            "format": "int64",
+            "minimum": 0
+          },
+          "expires_at": {
+            "type": "integer",
+            "format": "int64",
+            "minimum": 0
+          },
+          "is_valid": {
+            "type": "boolean"
+          },
+          "issued_at": {
+            "type": "integer",
+            "format": "int64",
+            "minimum": 0
+          },
+          "scopes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "user_id": {
+            "type": "string"
+          }
+        }
+      },
+      "ThreadsTokenDebug": {
+        "type": "object",
+        "properties": {
+          "data": {
+            "$ref": "#/components/schemas/ThreadsTokenData"
+          }
+        }
+      },
+      "ThreadsUser": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "username": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "threads_profile_picture_url": {
+            "type": "string"
+          },
+          "threads_biography": {
+            "type": "string"
+          },
+          "is_verified": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "metaAccessToken": {
+        "type": "http",
+        "scheme": "bearer"
+      }
+    }
+  },
+  "security": [
+    {
+      "metaAccessToken": []
+    }
+  ],
+  "x-meta-source": {
+    "repository": "https://github.com/fbsamples/threads_api",
+    "sampleRevision": "854fc140a37e20f6a7086cf3ee0065f99d41f646",
+    "documentation": "https://www.postman.com/meta/threads/documentation/dht3nzz/threads-api",
+    "revision": "bundled",
+    "profile": "Threads",
+    "includedOperationCount": 31
+  }
+}
